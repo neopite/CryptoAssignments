@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 
 namespace Lab4.Resources
 {
@@ -8,14 +10,8 @@ namespace Lab4.Resources
         private const int validCharFrom = 33;
         private const int validCharTo = 122;
 
-        private Dictionary<char[], char[]> translitSymbols = new Dictionary<char[], char[]>()
-        {
-            {new[] {'o', 'O'}, new[] {'0'}},
-            {new[] {'i', 'I'}, new[] {'1', '!', 'l'}},
 
-        };
-
-        public static string GenerateRandomPassword(int fromSymbolsCount, int toSymbolsCount)
+        private static string GenerateRandomPassword(int fromSymbolsCount, int toSymbolsCount)
         {
             var random = new Random();
             var symbolsCount = random.Next(fromSymbolsCount, toSymbolsCount);
@@ -29,13 +25,30 @@ namespace Lab4.Resources
             return new string(chars);
         }
 
-        public string[] GenerateRandomPasswords(int count)
+        public static List<string> GetCommonPasswords(int count)
+        {
+            var passwords = File
+                .ReadAllLines(@"C:\Users\Stami\RiderProjects\Crypto\Lab4\Resources\million-of-common-passwords.txt")
+                .ToList();
+            return passwords.TakeLast(count).ToList();
+        }
+
+        public static List<string> GetTopPasswords(int count)
+        {
+            var passwords = File
+                .ReadAllLines(@"C:\Users\Stami\RiderProjects\Crypto\Lab4\Resources\top-100-common-passwords.txt")
+                .ToList();
+            return passwords.TakeLast(count).ToList();
+        }
+
+
+        public static string[] GenerateRandomPasswords(int count)
         {
             var passwords = new List<string>();
             var random = new Random();
             for (int i = 0; i < count; i++)
             {
-                passwords.Add(GenerateRandomPassword(3,15));
+                passwords.Add(GenerateRandomPassword(3, 15));
             }
 
             return passwords.ToArray();

@@ -14,3 +14,6 @@ C:\Users\Stami\RiderProjects\Crypto\Lab4\obj\Debug\net5.0\Lab4.dll
 C:\Users\Stami\RiderProjects\Crypto\Lab4\obj\Debug\net5.0\ref\Lab4.dll
 C:\Users\Stami\RiderProjects\Crypto\Lab4\obj\Debug\net5.0\Lab4.pdb
 C:\Users\Stami\RiderProjects\Crypto\Lab4\obj\Debug\net5.0\Lab4.genruntimeconfig.cache
+C:\Users\Stami\RiderProjects\Crypto\Lab4\bin\Debug\net5.0\Konscious.Security.Cryptography.Argon2.dll
+C:\Users\Stami\RiderProjects\Crypto\Lab4\bin\Debug\net5.0\Konscious.Security.Cryptography.Blake2.dll
+C:\Users\Stami\RiderProjects\Crypto\Lab4\obj\Debug\net5.0\Lab4.csproj.CopyComplete
