@@ -22,18 +22,17 @@ namespace Lab4
                 return Convert.ToBase64String(hash);
             }
         }
-        
-        private (byte[],byte[]) HashByArgon2(string password, byte[] salt)
+
+        public static string HashByArgon2(string password, byte[] salt)
         {
             var argon2 = new Argon2id(Encoding.UTF8.GetBytes(password));
 
             argon2.Salt = salt;
-            argon2.DegreeOfParallelism = 8; 
+            argon2.DegreeOfParallelism = 8;
             argon2.Iterations = 4;
-            argon2.MemorySize = 1024 * 1024; 
+            argon2.MemorySize = 1024 * 1024;
 
-            return (argon2.GetBytes(16),salt);
+            return Convert.ToBase64String(argon2.GetBytes(16));
         }
-        
     }
 }

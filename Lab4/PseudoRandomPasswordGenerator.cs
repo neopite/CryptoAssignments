@@ -11,7 +11,7 @@ namespace Lab4.Resources
         private const int validCharTo = 122;
 
 
-        private static string GenerateRandomPassword(int fromSymbolsCount, int toSymbolsCount)
+        public static string GenerateRandomPassword(int fromSymbolsCount, int toSymbolsCount)
         {
             var random = new Random();
             var symbolsCount = random.Next(fromSymbolsCount, toSymbolsCount);
