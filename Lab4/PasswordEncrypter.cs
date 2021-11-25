@@ -28,9 +28,9 @@ namespace Lab4
             var argon2 = new Argon2id(Encoding.UTF8.GetBytes(password));
 
             argon2.Salt = salt;
-            argon2.DegreeOfParallelism = 8;
-            argon2.Iterations = 4;
-            argon2.MemorySize = 1024 * 1024;
+            argon2.DegreeOfParallelism = 1;
+            argon2.Iterations = 2;
+            argon2.MemorySize = 1024 * 4;
 
             return Convert.ToBase64String(argon2.GetBytes(16));
         }
