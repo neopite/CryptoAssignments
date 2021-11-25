@@ -10,9 +10,9 @@ namespace Lab1
     class Program
     {
         private static string resourceFolder = @"C:\Users\Stami\RiderProjects\Crypto\Lab1\Resources\";
-        private static string filePath = resourceFolder+"lab1.txt";
+        private static string filePath = resourceFolder + "lab1.txt";
 
-        private static string firstTaskAnswerPath = resourceFolder +"answer1.txt";
+        private static string firstTaskAnswerPath = resourceFolder + "answer1.txt";
         private static string secondTaskAnswerPath = resourceFolder + "answer2.txt";
 
         private static string firstTask =
@@ -26,8 +26,9 @@ namespace Lab1
 
         static void Main(string[] args)
         {
-          //SolveFirstTask();
-          WriteIndexesOfCoincidence(255);
+            //SolveFirstTask();
+            //WriteIndexesOfCoincidence(255);
+            SolveSecondTask();
         }
 
         private static void SolveFirstTask()
@@ -35,33 +36,49 @@ namespace Lab1
             var xorAttacker = new XORAttacker(firstTask);
             if (File.Exists(firstTaskAnswerPath))
             {
-               using (StreamWriter sw = File.AppendText(firstTaskAnswerPath))
-                       {
-                
+                using (StreamWriter sw = File.AppendText(firstTaskAnswerPath))
+                {
                     for (byte i = 0; i < 255; i++)
                     {
                         sw.WriteLine(i + "======================================");
                         sw.WriteLine(xorAttacker.DecryptTextByDefaultXOR(i));
                     }
-                    }
+                }
             }
         }
 
+        private static void XorTextByOffset(int keyLenght)
+        {
+            for (int i = 0; i < keyLenght; i++)
+            {
+                using (var writer = new StreamWriter(resourceFolder + "xorTextOffsetBy" + i + ".txt"))
+                {
+                    for (byte k = 0; k < 255; k++)
+                    {
+                        writer.WriteLine(k + "===================================");
+                        writer.WriteLine(XORAttacker.Decrypt(k, GetPrefarableText(keyLenght, i)));
+                    }
+                }
+            }
+        }
 
         private static void SolveSecondTask()
         {
-            var xorAttacker = new XORAttacker(GetPrefarableText(3, 1));
             var every2LetterLine = GetPrefarableText(3, 2);
             var every0LetterLine = GetPrefarableText(3, 0);
             var every1LetterLine = GetPrefarableText(3, 1);
-            string decrypted = XORAttacker.Decrypt(76, every0LetterLine);
+            string decrypted = XORAttacker.Decrypt(108, every0LetterLine);
             string decrypted1 = XORAttacker.Decrypt(16, every1LetterLine);
-            string decrypted2 = XORAttacker.Decrypt(108, every2LetterLine);
-            //Console.WriteLine(everyThirdLetterLine);
+            string decrypted2 = XORAttacker.Decrypt(76, every2LetterLine);
             var builder = new StringBuilder();
             for (var i = 0; i < decrypted.Length; i++)
             {
                 builder.Append(decrypted[i].ToString() + decrypted1[i].ToString() + decrypted2[i].ToString());
+            }
+
+            using (var fileWriter = new StreamWriter(resourceFolder + "answer2.txt",true,Encoding.UTF8))
+            {
+                fileWriter.WriteLine(builder.ToString());
             }
 
             Console.WriteLine(builder.ToString());
