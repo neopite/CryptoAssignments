@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
@@ -31,7 +32,7 @@ namespace Lab1.FirstTask
             StringBuilder builder = new StringBuilder();
             for (int i = 0; i < text.Length; i++)
             {
-                builder.Append((char)(text[i] ^ key));
+                builder.Append((char) (text[i] ^ key));
             }
 
             return builder.ToString();
