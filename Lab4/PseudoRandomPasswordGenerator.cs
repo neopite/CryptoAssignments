@@ -9,6 +9,8 @@ namespace Lab4.Resources
     {
         private const int validCharFrom = 33;
         private const int validCharTo = 122;
+        private string path = @"C:\Users\Stami\RiderProjects\Crypto\";
+
 
 
         public static string GenerateRandomPassword(int fromSymbolsCount, int toSymbolsCount)
@@ -28,7 +30,7 @@ namespace Lab4.Resources
         public static List<string> GetCommonPasswords(int count)
         {
             var passwords = File
-                .ReadAllLines(@"C:\Users\Stami\RiderProjects\Crypto\Lab4\Resources\million-of-common-passwords.txt")
+                .ReadAllLines(GetPathInProject("Resources\\million-of-common-passwords.txt"))
                 .ToList();
             return passwords.TakeLast(count).ToList();
         }
@@ -36,7 +38,7 @@ namespace Lab4.Resources
         public static List<string> GetTopPasswords(int count)
         {
             var passwords = File
-                .ReadAllLines(@"C:\Users\Stami\RiderProjects\Crypto\Lab4\Resources\top-100-common-passwords.txt")
+                .ReadAllLines(GetPathInProject("Resources\\top-100-common-passwords.txt"))
                 .ToList();
             return passwords.TakeLast(count).ToList();
         }
@@ -52,6 +54,11 @@ namespace Lab4.Resources
             }
 
             return passwords.ToArray();
+        }
+        
+        private static string GetPathInProject(string path)
+        {
+            return $"../../../{path}";
         }
     }
 }
