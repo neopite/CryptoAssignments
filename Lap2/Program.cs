@@ -48,14 +48,15 @@ namespace Lab2
             return result;
         }
 
-        public static string GetResult(List<string> array)
+        public static List<string> GetResult(List<string> array)
         {
-            var sb = new StringBuilder();
+            var result = new List<string>();
             foreach (var line in array)
             {
-                sb.Append(String.Join("",Convert.FromHexString(line).Select(x => Convert.ToChar(x))));
+                result.Add(String.Join("",Convert.FromHexString(line).Select(x => Convert.ToChar(x))));
             }
-            return sb.ToString();
+
+            return result;
 
         }
 
@@ -78,7 +79,7 @@ namespace Lab2
             var array = GetXors(duplets1, duplets2);
 
             var result = GetResult(array);
-            Console.WriteLine(result);
+            result.ForEach(x => Console.Write(x+ " "));
         }
     }
 }
