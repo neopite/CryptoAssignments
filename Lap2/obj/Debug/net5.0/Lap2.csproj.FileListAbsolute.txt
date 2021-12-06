@@ -1,0 +1,16 @@
+C:\Users\Stami\RiderProjects\Crypto\Lap2\bin\Debug\net5.0\Lap2.exe
+C:\Users\Stami\RiderProjects\Crypto\Lap2\bin\Debug\net5.0\Lap2.deps.json
+C:\Users\Stami\RiderProjects\Crypto\Lap2\bin\Debug\net5.0\Lap2.runtimeconfig.json
+C:\Users\Stami\RiderProjects\Crypto\Lap2\bin\Debug\net5.0\Lap2.runtimeconfig.dev.json
+C:\Users\Stami\RiderProjects\Crypto\Lap2\bin\Debug\net5.0\Lap2.dll
+C:\Users\Stami\RiderProjects\Crypto\Lap2\bin\Debug\net5.0\ref\Lap2.dll
+C:\Users\Stami\RiderProjects\Crypto\Lap2\bin\Debug\net5.0\Lap2.pdb
+C:\Users\Stami\RiderProjects\Crypto\Lap2\obj\Debug\net5.0\Lap2.csproj.AssemblyReference.cache
+C:\Users\Stami\RiderProjects\Crypto\Lap2\obj\Debug\net5.0\Lap2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Stami\RiderProjects\Crypto\Lap2\obj\Debug\net5.0\Lap2.AssemblyInfoInputs.cache
+C:\Users\Stami\RiderProjects\Crypto\Lap2\obj\Debug\net5.0\Lap2.AssemblyInfo.cs
+C:\Users\Stami\RiderProjects\Crypto\Lap2\obj\Debug\net5.0\Lap2.csproj.CoreCompileInputs.cache
+C:\Users\Stami\RiderProjects\Crypto\Lap2\obj\Debug\net5.0\Lap2.dll
+C:\Users\Stami\RiderProjects\Crypto\Lap2\obj\Debug\net5.0\ref\Lap2.dll
+C:\Users\Stami\RiderProjects\Crypto\Lap2\obj\Debug\net5.0\Lap2.pdb
+C:\Users\Stami\RiderProjects\Crypto\Lap2\obj\Debug\net5.0\Lap2.genruntimeconfig.cache

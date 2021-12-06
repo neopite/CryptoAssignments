@@ -9,10 +9,7 @@ namespace Lab4.Resources
     {
         private const int validCharFrom = 33;
         private const int validCharTo = 122;
-        private string path = @"C:\Users\Stami\RiderProjects\Crypto\";
-
-
-
+        
         public static string GenerateRandomPassword(int fromSymbolsCount, int toSymbolsCount)
         {
             var random = new Random();
