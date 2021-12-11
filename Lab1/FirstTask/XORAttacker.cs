@@ -14,14 +14,16 @@ namespace Lab1.FirstTask
             this.encryptedText = encryptedText;
         }
 
-        public string DecryptTextByDefaultXOR(byte key)
+        public string DecryptTextByDefaultXOR(int key)
         {
             StringBuilder builder = new StringBuilder();
-            for (int i = 0; i < encryptedText.Length / 2; i += 2)
+            for (int i = 0; i < encryptedText.Length; i += 2)
             {
-                int intvalue = Convert.ToInt32(encryptedText.Substring(i, 2), 16);
-                int value = (byte) intvalue ^ key;
-                builder.Append((char) value + " ");
+                var currSymbol = encryptedText.Substring(i, 2);
+                int intvalue = Convert.ToInt32(currSymbol, 16);
+                int value = intvalue ^ key;
+                var charRep = (char) value;
+                builder.Append(charRep);
             }
 
             return builder.ToString();
