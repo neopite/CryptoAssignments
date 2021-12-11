@@ -6,4 +6,8 @@
         <RootNamespace>Lap2</RootNamespace>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Folder Include="ResourceImages" />
+    </ItemGroup>
+
 </Project>

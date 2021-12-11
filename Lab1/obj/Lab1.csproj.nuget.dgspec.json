@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Stami\\RiderProjects\\Crypto\\Lab1\\Lab1.csproj": {}
+    "C:\\Users\\Sergey\\Desktop\\crypto\\CryptoAssignments\\Lab1\\Lab1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Stami\\RiderProjects\\Crypto\\Lab1\\Lab1.csproj": {
+    "C:\\Users\\Sergey\\Desktop\\crypto\\CryptoAssignments\\Lab1\\Lab1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Stami\\RiderProjects\\Crypto\\Lab1\\Lab1.csproj",
+        "projectUniqueName": "C:\\Users\\Sergey\\Desktop\\crypto\\CryptoAssignments\\Lab1\\Lab1.csproj",
         "projectName": "Lab1",
-        "projectPath": "C:\\Users\\Stami\\RiderProjects\\Crypto\\Lab1\\Lab1.csproj",
-        "packagesPath": "C:\\Users\\Stami\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Stami\\RiderProjects\\Crypto\\Lab1\\obj\\",
+        "projectPath": "C:\\Users\\Sergey\\Desktop\\crypto\\CryptoAssignments\\Lab1\\Lab1.csproj",
+        "packagesPath": "C:\\Users\\Sergey\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Sergey\\Desktop\\crypto\\CryptoAssignments\\Lab1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Stami\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Sergey\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -52,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
