@@ -3,13 +3,16 @@
 ## Part 1 - Password generating
 
 For this part we've searched for the top 100 passwords, that human often use. 
-Also we've found 1 million of commonly used passwords. And also we've generated 50000 random passwords.
+Also we've found 1 million of commonly used passwords. And also we've generated 50000 random passwords with the different patterns of human-like passwords.
+1. We used file with human`s names and we added numbers to the end of name and vice versa
+2. Generated random name as a password (It`s a common practice)
+3. Generated a sequence of numbers . It`s also not good idea.
 
 Our app then concatenates this 3 lists of passwords into one and 
 then encrypt all of them with the help of hashing algorithms (MD5 and SHA256).
 In this case we didn't add any salts in these hashing algorithms.
 
-To generate really hard-to-decrypt passwords we use argon2 hashing algorithm
+To generate really hard-to-decrypt passwords we use argon2id hashing algorithm
 with floating-size salt. The salts are also generate with the 
 real random generator from System.Security.Cryptography namespace.
 
