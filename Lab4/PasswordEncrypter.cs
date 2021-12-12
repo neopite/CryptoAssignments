@@ -10,8 +10,8 @@ namespace Lab4
         public static string HashByMD5(string password)
         {
             var md5 = MD5.Create();
-            var hash = md5.ComputeHash(Encoding.UTF8.GetBytes(password));
-            return Convert.ToBase64String(hash);
+            var hash = md5.ComputeHash(Encoding.ASCII.GetBytes(password));
+            return Util.ToStringByteArray(hash);
         }
 
         public static string HashBySHA256(string password)
@@ -19,7 +19,7 @@ namespace Lab4
             using (SHA256 sha256Hash = SHA256.Create())
             {
                 byte[] hash = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(password));
-                return Convert.ToBase64String(hash);
+                return Util.ToStringByteArray(hash);
             }
         }
 
@@ -29,10 +29,10 @@ namespace Lab4
 
             argon2.Salt = salt;
             argon2.DegreeOfParallelism = 1;
-            argon2.Iterations = 2;
+            argon2.Iterations = 1;
             argon2.MemorySize = 1024 * 4;
 
-            return Convert.ToBase64String(argon2.GetBytes(16));
+            return Util.ToStringByteArray(argon2.GetBytes(16));
         }
     }
 }

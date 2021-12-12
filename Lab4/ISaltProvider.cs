@@ -17,7 +17,7 @@ namespace Lab4
 
         private byte[] CreateSalt(byte lenght)
         {
-            var buffer = new byte[new Random().Next(2,lenght)]; //set salt lenght
+            var buffer = new byte[new Random().Next(16,lenght)]; //set salt lenght
             var rng = new RNGCryptoServiceProvider();
             rng.GetBytes(buffer);
             return buffer;
